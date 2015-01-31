@@ -10,10 +10,11 @@
 	%nav.navbar.navbar-default
 		.container
 			.navbar-brand= link_to "Recipe Box", root_path
-			
-			.nav.navbar-brand.navbar-right= link_to "New Recipe", new_recipe_path
-
 		
+			%ul.nav.navbar-nav.navbar-right
+				%li= link_to "New Recipe", new_recipe_path
+				%li= link_to "Sign Out", root_path
+
 	.container
 		- flash.each do |name, msg|
 			= content_tag :div, msg, class: "alert"
